@@ -1,0 +1,30 @@
+name: Go Backend CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.22'
+
+    - name: Build
+      run: |
+        cd backend
+        go build -v ./...
+
+    - name: Test (optional)
+      run: |
+        cd backend
+        go test ./...
