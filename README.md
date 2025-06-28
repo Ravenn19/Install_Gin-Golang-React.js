@@ -34,7 +34,17 @@
 
 ---
 
-## 📁 Struktur Proyek
+## 🗂️ Struktur Proyek
 
+Proyek ini dibagi menjadi dua bagian utama:
+
+📁 `backend/` – berisi kode server (Gin + Golang)  
+📁 `frontend/` – aplikasi antarmuka pengguna (React.js)
+
+## 🚀 Deploy Backend ke Railway
+
+1. Daftar ke [Railway](https://railway.app)
+2. Buat Project → Upload folder `backend`
+3. Tambahkan variabel `.env`:
 
 
